@@ -1,0 +1,16 @@
+{
+  "movies": [
+    {
+      "id": "2204",
+      "title": "Avatar",
+      "year": 2009,
+      "genre": "Science Fiction"
+    },
+    {
+      "id": "535d",
+      "title": "coco",
+      "genre": "Animation Fantasy",
+      "year": 2017
+    }
+  ]
+}
