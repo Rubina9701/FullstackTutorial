@@ -1,4 +1,5 @@
 <?php 
+<<<<<<< HEAD
 
 $server = 'localhost';
 $username = 'root';
@@ -26,3 +27,21 @@ try {
 }
 
 ?>
+=======
+$server = "localhost";
+$database = "school_db";
+$username = "root";
+$password = "";
+
+try {
+    $conn = new PDO(
+        "mysql:host=$server;dbname=$database;charset=utf8",
+        $username,
+        $password
+    );
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("Unable to connect to database: " . $e->getMessage());
+}
+?>
+>>>>>>> c8e75afd6b764ed2443984fc5859b396ce290e53
