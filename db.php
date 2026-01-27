@@ -1,17 +1,24 @@
-<?php 
-$server = "localhost";
-$database = "school_db";
-$username = "root";
-$password = "";
+<?php
+
+$host = 'localhost';
+$database   = 'week10';
+$username = 'root';
+$password = '';
+
+$options = [
+    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_EMULATE_PREPARES => true,
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
+];
 
 try {
-    $conn = new PDO(
-        "mysql:host=$server;dbname=$database;charset=utf8",
+    $pdo = new PDO(
+        "mysql:host=$host;dbname=$database",
         $username,
-        $password
+        $password,
+        $options
     );
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
-    die("Unable to connect to database: " . $e->getMessage());
+    die('Database connection failed.');
 }
 ?>
